@@ -177,7 +177,7 @@ rum_tsquery_pre_consistent(PG_FUNCTION_ARGS)
 
 		res = TS_execute(GETQUERY(query),
 						 &gcv,
-						 TS_EXEC_PHRASE_AS_AND,
+						 TS_EXEC_PHRASE_NO_POS,
 						 pre_checkcondition_rum);
 	}
 
@@ -326,7 +326,7 @@ rum_tsquery_timestamp_consistent(PG_FUNCTION_ARGS)
 		gcv.recheckPhrase = true;
 
 		res = TS_execute(GETQUERY(query), &gcv,
-						 TS_EXEC_CALC_NOT | TS_EXEC_PHRASE_AS_AND,
+						 TS_EXEC_CALC_NOT | TS_EXEC_PHRASE_NO_POS,
 						 checkcondition_rum);
 	}
 

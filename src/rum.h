@@ -427,7 +427,7 @@ extern IndexBuildResult *rumbuild(Relation heap, Relation index,
 extern void rumbuildempty(Relation index);
 extern bool ruminsert(Relation index, Datum *values, bool *isnull,
 		  ItemPointer ht_ctid, Relation heapRel,
-		  IndexUniqueCheck checkUnique);
+		  IndexUniqueCheck checkUnique, struct IndexInfo *indexInfo);
 extern void rumEntryInsert(RumState * rumstate,
 			   OffsetNumber attnum, Datum key, RumNullCategory category,
 			   RumKey * items, uint32 nitem, GinStatsData *buildStats);

@@ -788,7 +788,7 @@ rumHeapTupleInsert(RumState * rumstate, OffsetNumber attnum,
 bool
 ruminsert(Relation index, Datum *values, bool *isnull,
 		  ItemPointer ht_ctid, Relation heapRel,
-		  IndexUniqueCheck checkUnique)
+		  IndexUniqueCheck checkUnique, struct IndexInfo *indexInfo)
 {
 	RumState	rumstate;
 	MemoryContext oldCtx;

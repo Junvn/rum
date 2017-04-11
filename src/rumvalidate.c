@@ -21,6 +21,7 @@
 #include "catalog/pg_type.h"
 #include "utils/builtins.h"
 #include "utils/catcache.h"
+#include "utils/regproc.h"
 #include "utils/syscache.h"
 
 #include "rum.h"
